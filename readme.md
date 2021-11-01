@@ -1,6 +1,6 @@
 ## kirki - options 
 
-```
+```php
 <?php
 ITClan_Kirki::add_section('color_settings', array(
 	'title'          => esc_html__('Theme Color', 'ic-core'),
@@ -21,19 +21,19 @@ ITClan_Kirki::add_field( 'theme_config_id', [
 ```
 
 ## add settings
-```
+```php
 include( IC_INC_DIR . '/kirki-options/theme-color.php' );
 ```
 
 ## retrive
-```
+```php
 $text_color = get_theme_mod( 'text_color', '#005EEB' );
 color: '. esc_attr($primary_color) .';
 ```
 
 
 ## include to function
-```
+```php
 require_once( IC_INC_DIR . '/theme-color.php' );
 wp_add_inline_style( 'ic-core', $theme_color );
 ```
